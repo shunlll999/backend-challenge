@@ -7,9 +7,10 @@
     border-bottom: 1px solid rgba(71, 47, 10, 0.568);
   }
 
-  &--item {
+  &--card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
