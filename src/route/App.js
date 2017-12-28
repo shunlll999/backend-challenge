@@ -1,21 +1,44 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { EventDispatcher } from '../actions';
+
+// import logo from '../assets/images/logo.svg';
+import '../assets/styles/application.scss';
+import TopBar from '../components/TopBar';
+import ShopBar from '../components/ShopBar';
+import Catagory from '../components/Catagory';
+import Banner from '../components/Banner';
 
 class App extends Component {
+
+  _onSelectTopMenuHandler(action) {
+    console.log(action);
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="app">
+        <TopBar action={this._onSelectTopMenuHandler.bind(this)}/>
+        <ShopBar/>
+        <Catagory/>
+        <Banner/>
+        <div>NEXT</div>
       </div>
     );
   }
 }
 
-export default App;
+const dispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    getProduct: EventDispatcher.getProduct,
+  }, dispatch);
+};
+
+const stateToProps = (state) => {
+  return {
+    products: state.products
+  };
+};
+
+export default connect(stateToProps, dispatchToProps)(App);

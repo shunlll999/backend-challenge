@@ -1,0 +1,59 @@
+.banner {
+  
+  margin-top: 3.5rem;
+
+  &__container {
+    margin: auto;
+    display: flex;
+    max-width: $max-width;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    width: 697px;
+    height: 435px;
+    background-color: #cccccc;
+
+    &--next {
+      position: absolute;
+      bottom: 10px;
+      left: 90px;
+      width: 70px;
+      height: 70px;
+      color: #fff;
+      outline: none;
+      background-color: rgba(34, 34, 34, 0.726);
+    }
+
+    &--prev {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 70px;
+      height: 70px;
+      color: #fff;
+      outline: none;
+      background-color: rgba(34, 34, 34, 0.726);
+    }
+    
+  }
+
+  &__tap {
+    &--item {
+      width: 278px;
+      height: 141px;
+      background-color: #222222;
+      color: #fff;
+      margin: 0 0 0.4rem 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+}

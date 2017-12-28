@@ -1,0 +1,51 @@
+.catagory {
+  position: relative;
+
+  &__container {
+    margin: auto;
+    max-width: $max-width;
+  }
+
+  &__list {
+    padding-right: $gap-border;
+
+    &--item {
+      height: 40px;
+      width: 140px;
+      color: #000;
+      font-size: 0.9rem;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #ebe8e8;
+      }
+
+      &.active {
+        background-color: #f38256;
+        color: #fff;
+      }
+    }
+  }
+  
+  &::before {
+    opacity: 0.5;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    content: '';
+    border: 0.04rem solid #706760;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    content: '';
+    border: 0.05rem solid #f38256;
+  }
+}
