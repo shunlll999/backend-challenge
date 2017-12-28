@@ -20,24 +20,34 @@ class App extends Component {
     console.log(action);
   }
 
+  _onSelectCategory(category) {
+    this.props.getProduct(category);
+  }
+
+  _renderProduct() {
+    const { projectsList } = this.props.products;
+    return projectsList.map((data, i) => <Card key={i} photo={data.photo}/>);
+  }
+
   render() {
     return (
       <div className="app">
         <TopBar action={this._onSelectTopMenuHandler.bind(this)}/>
         <ShopBar/>
-        <Catagory/>
+        <Catagory selected={this._onSelectCategory.bind(this)}/>
         <Banner/>
         <Products>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <div className="product__underline"></div>
-          <Card/>
+          {/* <Card/>
           <Card/>
           <Card/>
           <Card/>
           <div className="product__underline"></div>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <div className="product__underline"></div> */}
+          { this._renderProduct() }
         </Products>
         <SubscribeBar/>
         <Footer/>

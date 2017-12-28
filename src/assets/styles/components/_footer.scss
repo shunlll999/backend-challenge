@@ -1,6 +1,52 @@
 .footer {
   margin: 2rem auto;
+  display:  flex;
   max-width: $max-width;
-
+  padding-bottom: 1rem;
   border-top: 3px solid $theme-color;
+  border-bottom: 1px solid #cccccc;
+
+  &__other {
+    width: $footer-tab-width;
+    margin-top: 1rem;
+
+    &--title {
+      font-size: map-get($fonts-size, font-small);
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+    }
+
+    &--item {
+      font-size: map-get($fonts-size, font-small);
+      color: #cccccc;
+    }
+  }
+
+  &__customer {
+    width: $footer-tab-width;
+    margin-top: 1rem;
+
+    &--title {
+      font-size: map-get($fonts-size, font-small);
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+    }
+
+    &--item {
+      font-size: map-get($fonts-size, font-small);
+      color: #cccccc;
+    }
+  }
+
+  &__introducing {
+    width: $footer-tab-width;
+    margin-top: 1rem;
+
+    &--title {
+      font-size: map-get($fonts-size, font-medium);
+      font-weight: 600;
+      color: $theme-color;
+      padding-bottom: 0.5rem;
+    }
+  }
 }
