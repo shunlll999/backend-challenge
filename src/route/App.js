@@ -9,6 +9,8 @@ import TopBar from '../components/TopBar';
 import ShopBar from '../components/ShopBar';
 import Catagory from '../components/Catagory';
 import Banner from '../components/Banner';
+import Products from '../components/Products';
+import Card from '../components/Products/Card';
 
 class App extends Component {
 
@@ -23,7 +25,16 @@ class App extends Component {
         <ShopBar/>
         <Catagory/>
         <Banner/>
-        <div>NEXT</div>
+        <Products>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+        </Products>
       </div>
     );
   }

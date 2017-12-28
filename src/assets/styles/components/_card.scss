@@ -1,0 +1,62 @@
+.card {
+  max-width: 220px;
+  padding: 1rem 0 1rem 0;
+
+  &--title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0 0.5rem;
+  }
+
+  &--description {
+    font-size: 0.8rem;
+    color: #636161;
+    padding: 0 0 0.5rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $theme-color;
+    padding-top: 0.5rem;
+    
+    &--witchlist {
+      font-size: 0.8rem;
+      color: #636161;
+      line-height: 35px;
+      cursor: pointer;
+    }
+
+    &--add-cart {
+      position: relative;
+      width: 100px;
+      height: 35px;
+      outline: none;
+      color: #fff;
+      background-color: #636161;
+
+      &:hover::before {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      &:active::before {
+        background-color: #544f4b;
+      }
+
+      &::before {
+        position: absolute;
+        background-color: $theme-color;
+        content: 'ADD TO CART';
+        line-height: 35px;
+        width: 100px;
+        height: 35px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
+  }
+  
+}

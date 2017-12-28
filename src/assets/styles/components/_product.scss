@@ -1,0 +1,15 @@
+.product {
+  margin: auto;
+  max-width: $max-width;
+
+  &--title {
+    padding: 1rem 0 0.2rem 0;
+    border-bottom: 1px solid rgba(71, 47, 10, 0.568);
+  }
+
+  &--item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
