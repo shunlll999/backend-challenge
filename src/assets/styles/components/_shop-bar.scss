@@ -11,13 +11,13 @@
     max-width: 180px;
     text-align: center;
     line-height: 50px;
-    background-color: #ffe600;
+    background-color: $theme-color;
 
     &--small {
       font-size: 10px;
       line-height: 15px;
       letter-spacing: 0.5rem;
-      color: #945d15;
+      color: #ffe600;
       padding-left: 0.2rem;
     }
   }

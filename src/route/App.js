@@ -11,6 +11,8 @@ import Catagory from '../components/Catagory';
 import Banner from '../components/Banner';
 import Products from '../components/Products';
 import Card from '../components/Products/Card';
+import SubscribeBar from '../components/SubscribeBar';
+import Footer from '../components/Footer';
 
 class App extends Component {
 
@@ -30,11 +32,15 @@ class App extends Component {
           <Card/>
           <Card/>
           <Card/>
+          <div className="product__underline"></div>
           <Card/>
           <Card/>
           <Card/>
           <Card/>
+          <div className="product__underline"></div>
         </Products>
+        <SubscribeBar/>
+        <Footer/>
       </div>
     );
   }

@@ -1,0 +1,23 @@
+.subscribe {
+  position: relative;
+  margin: 1rem auto;
+  display: flex;
+  max-width: $max-width;
+  height: 100px;
+  background: linear-gradient(141deg, #998a7f 0%, #ac9685 51%, #b89b83 75%);
+  line-height: 60px;
+
+  &__social {
+    width: 256px;
+    height: 60px;
+    margin: 20px;
+    border-right: solid 1px #86776b;
+    box-shadow: 1px 0px 0px #c1a68b;
+  }
+
+  &__info {
+    width: 768px;
+    height: 60px;
+    margin: 20px;
+  }
+}
